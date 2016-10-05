@@ -13,9 +13,9 @@
 ::::::::\ `--' /::::::::
 ````
 
-yodasay is a (currently non-configurable) talking yoda, based on charactersay, originally written in Perl by [Tony Monroe](http://www.nog.net/~tony/) and then re-written in Node.js by [Fabio Crisci](https://github.com/piuccio).
+yodasay is a (currently non-configurable) talking yoda, based on cowsay, originally written in Perl by [Tony Monroe](http://www.nog.net/~tony/) and then re-written in Node.js by [Fabio Crisci](https://github.com/piuccio).
 
-This project is a fork of https://github.com/piuccio/charactersay.
+This project is a fork of https://github.com/piuccio/cowsay.
 
 ## Install
 
@@ -29,7 +29,7 @@ or
 
     yodathink Node.js is cool
 
-It acts (well, it will eventually) in the same way as charactersay, so consult `charactersay(1)` or run `charactersay -h`
+It acts (well, it will eventually) in the same way as cowsay, so consult `cowsay(1)` or run `cowsay -h`
 
 ## Usage as a module
 

@@ -1,4 +1,4 @@
-charactersay is licensed under the following MIT license:
+yodasay is licensed under the following MIT license:
 
 ====
 Copyright (c) 2012 Fabio Crisci <fabio.crisci@gmail.com>
@@ -23,4 +23,4 @@ SOFTWARE.
 
 ====
 
-The original idea of charactersay come from [Tony Monroe](http://www.nog.net/~tony/) - [charactersay](https://github.com/schacon/charactersay) 
+The original idea of yodasay comes from [Tony Monroe](http://www.nog.net/~tony/) - [cowsay](https://github.com/schacon/cowsay)
