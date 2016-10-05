@@ -1,25 +1,25 @@
 {
-  "name": "cowsay",
-  "version": "1.1.8",
-  "description": "cowsay is a configurable talking cow",
+  "name": "yodasay",
+  "version": "1.0.0",
+  "description": "yodasay is a configurable talking Yoda",
   "keywords": [
-    "cow",
-    "cowsay",
-    "cowthink",
+    "yoda",
+    "yodasay",
+    "yodathink",
     "figlet",
     "talking",
     "ASCII"
   ],
-  "homepage": "https://github.com/piuccio/cowsay",
+  "homepage": "https://github.com/scotttesler/yodasay",
   "author": {
-    "name": "Fabio Crisci",
-    "email": "piuccio@gmail.com",
-    "url": "https://github.com/piuccio/"
+    "name": "Scott Tesler",
+    "email": "scottiet123@gmail.com",
+    "url": "https://github.com/scotttesler/"
   },
   "main": "./index",
   "bin": {
-    "cowsay": "./cli.js",
-    "cowthink": "./cli.js"
+    "yodasay": "./cli.js",
+    "yodathink": "./cli.js"
   },
   "files": [
     "index.js",
@@ -29,7 +29,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/piuccio/cowsay.git"
+    "url": "https://github.com/scotttesler/yodasay.git"
   },
   "scripts": {
     "test": "node test.js"
