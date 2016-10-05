@@ -1,11 +1,14 @@
 {
   "name": "yodasay",
   "version": "1.0.0",
-  "description": "yodasay is a configurable talking Yoda",
+  "description": "yodasay is a talking Yoda",
   "keywords": [
     "yoda",
     "yodasay",
     "yodathink",
+    "character",
+    "charactersay",
+    "characterthink",
     "figlet",
     "talking",
     "ASCII"
@@ -24,7 +27,7 @@
   "files": [
     "index.js",
     "cli.js",
-    "cows/",
+    "characters/",
     "lib/"
   ],
   "repository": {
