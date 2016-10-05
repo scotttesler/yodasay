@@ -16,6 +16,7 @@
 yodasay is a (currently non-configurable) talking yoda, based on cowsay, originally written in Perl by [Tony Monroe](http://www.nog.net/~tony/) and then re-written in Node.js by [Fabio Crisci](https://github.com/piuccio).
 
 This project is a fork of https://github.com/piuccio/cowsay.
+The Yoda ASCII art was taken from [Christopher Johnson](http://www.chris.com/ascii/index.php?art=movies/star%20wars)'s website.
 
 ## Install
 
