@@ -13,7 +13,7 @@
 ::::::::\ `--' /::::::::
 ````
 
-yodasay is a (currently, non-configurable) talking yoda, based on charactersay, originally written in Perl by [Tony Monroe](http://www.nog.net/~tony/) and then re-written in Node.js by [Fabio Crisci](https://github.com/piuccio).
+yodasay is a (currently non-configurable) talking yoda, based on charactersay, originally written in Perl by [Tony Monroe](http://www.nog.net/~tony/) and then re-written in Node.js by [Fabio Crisci](https://github.com/piuccio).
 
 This project is a fork of https://github.com/piuccio/charactersay.
 
