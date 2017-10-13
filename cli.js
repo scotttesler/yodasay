@@ -1,24 +1,66 @@
 #!/usr/bin/env node
 var argv = require("optimist")
-  .usage("Usage: $0 [-h] [-l] [-n] [-W column] text\n\n" +
-    "If any command-line arguments are left over after all switches have been processed, they become the character's message.\n\n" +
-    "If the program is invoked as yodathink then the character will think its message instead of saying it.")
-  .describe({
-    "h" : "Display this help message",
-    "n" : "If it is specified, the given message will not be word-wrapped.",
-    "W" : "Specifies roughly where the message should be wrapped. The default is equivalent to -W 40 i.e. wrap words at or before the 40th column.",
-    "l" : "List all characters included in this package."
-  })
-  .argv;
+.usage("Usage: $0 [-e eye_string] [-f cowfile] [-h] [-l] [-n] [-T tongue_string] [-W column] [-bdgpstwy] text\n\n" +
+
+  "              _________________      ____         __________\n" +
+  ".       .    /                 |    /    \\    .  |          \\ \n" +
+  "    .       /    ______   _____| . /      \\      |    ___    |     .     .\n" +
+  "            \\    \\    |   |       /   /\\   \\     |   |___>   | \n" +
+  "          .  \\    \\   |   |      /   /__\\   \\  . |         _/             .\n" +
+  ".     ________>    |  |   | .   /            \\   |   |\\    \\_______    .\n" +
+  "     |            /   |   |    /    ______    \\  |   | \\           |\n" +
+  "     |___________/    |___|   /____/      \\____\ |___|  \\__________|    .\n" +
+  " .     ____    __  . _____   ____      .  __________   .  _________\n" +
+  "      \\    \\  /  \\  /    /  /    \\       |          \\    /         |      .\n" +
+  "       \\    \\/    \\/    /  /      \\      |    ___    |  /    ______|  .\n" +
+  "        \\              /  /   /\\   \\ .   |   |___>   |  \\    \\ \n" +
+  "  .      \\            /  /   /__\\   \\    |         _/.   \\    \\ \n" +
+  "          \\    /\\    /  /            \\   |   |\\    \\______>    |   .\n" +
+  "           \\  /  \\  /  /    ______    \\  |   | \\              /          .\n" +
+  ".       .   \\/    \\/  /____/      \\____\\ |___|  \\____________/\n\n" +
+  "If the program is invoked as `yodathink` then the character will think its message instead of saying it.")
+.options({
+  "e" : {
+    default : "oo"
+  },
+  "T" : {
+    default : "  "
+  },
+  "W" : {
+    default : 40
+  },
+  "f" : {
+    default : "default"
+  }
+})
+.describe({
+  "b" : "Mode: Borg",
+  "d" : "Mode: Dead",
+  "g" : "Mode: Greedy",
+  "p" : "Mode: Paranoia",
+  "s" : "Mode: Stoned",
+  "t" : "Mode: Tired",
+  "w" : "Mode: Wired",
+  "y" : "Mode: Youthful",
+  "e" : "Select the appearance of the character's eyes.",
+  "T" : "The tongue is configurable similarly to the eyes through -T and tongue_string.",
+  "h" : "Display this help message",
+  "n" : "If it is specified, the given message will not be word-wrapped.",
+  "W" : "Specifies roughly where the message should be wrapped. The default is equivalent to -W 40 i.e. wrap words at or before the 40th column.",
+  "f" : "Specifies a character picture file (''cowfile'') to use. It can be either a path to a character file or the name of one of characters included in the package.",
+  "l" : "List all cowfiles included in this package."
+})
+.boolean(["b", "d", "g", "p", "s", "t", "w", "y", "n", "h", "l"])
+.argv;
 
 if (argv.l) {
-  listCharacters();
+  listCows();
 } else if (argv.h) {
   showHelp();
 } else if (argv._.length) {
   say();
 } else {
-  require("get-stdin")(function (data) {
+  require("get-stdin")().then(function (data) {
     if (data) {
       argv._ = [data];
       say();
@@ -36,7 +78,7 @@ function say () {
   console.log(think ? module.think(argv) : module.say(argv));
 }
 
-function listCharacters () {
+function listCows () {
   require("./index").list(function(err, list) {
   if (err) throw new Error(err);
   console.log(list.join("  "));
