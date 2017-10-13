@@ -67,13 +67,15 @@ It acts in the same way as cowsay, so consult `yodasay(1)` or run `yodasay -h`
 
 yodasay can be used as any other npm dependency
 
-    var yodasay = require("yodasay");
+```js
+var yodasay = require('yodasay');
 
-    console.log(yodasay.say({
-      text : "Use yodasay, you will."
-    }));
+console.log(yodasay.say({
+  text : 'Use yodasay, you will.'
+}));
 
-    // or yodasay.think()
+// or yodasay.think()
+```
 
 ## Pipe from standard input
 
@@ -98,7 +100,7 @@ console.log(think({
   text: 'meditating in the browser',
   cow: R2D2,
   eyes: 'pp',
-  tongue: ';;',
+  tongue: ';;'
 }));
 ```
 
