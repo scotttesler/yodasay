@@ -1,6 +1,6 @@
-var characterFormat = "#Comment \
+var cowFormat = "#Comment \
 # just some other comment, it's going to be ignored anyway ...\
-$the_character = <<EOC;\n\
+$the_cow = <<EOC;\n\
  $thoughts\
    $thoughts\
 chars($eyes) \
@@ -19,16 +19,16 @@ $tongue";
 var expected = " ||   ||chars(oo) U ";
 
 var replacer = require("../lib/replacer");
-exports.characterFormat = function (test) {
+exports.cowFormat = function (test) {
 	test.expect(1);
 
-	var character = replacer(characterFormat, {
+	var cow = replacer(cowFormat, {
 		thoughts : "||",
 		eyes : "oo",
 		tongue : "U "
 	});
 
-	test.equal(character, expected);
+	test.equal(cow, expected);
 
 	test.done();
 };
@@ -36,13 +36,13 @@ exports.characterFormat = function (test) {
 exports.plainText = function (test) {
 	test.expect(1);
 
-	var character = replacer(plainText, {
+	var cow = replacer(plainText, {
 		thoughts : "||",
 		eyes : "oo",
 		tongue : "U "
 	});
 
-	test.equal(character, expected);
+	test.equal(cow, expected);
 
 	test.done();
 };

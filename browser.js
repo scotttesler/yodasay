@@ -5,7 +5,7 @@ import faces from "./lib/faces";
 import DEFAULT_COW from './cows/default.cow';
 
 export { default as R2D2 } from './cows/R2D2.cow';
-export { default as yoda } from './cows/yoda.cow';
+export { default as DEFAULT } from './cows/default.cow';
 
 function converToCliOptions(browserOptions) {
   const cliOptions = {
