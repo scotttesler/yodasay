@@ -18,14 +18,14 @@ if (argv.l) {
 } else if (argv._.length) {
   say();
 } else {
-  require("get-stdin")(function (data) {
-    if (data) {
-      argv._ = [data];
-      say();
-    } else {
-      showHelp();
-    }
-  });
+	require("get-stdin")().then(function (data) {
+		if (data) {
+			argv._ = [data];
+			say();
+		} else {
+			showHelp();
+		}
+	});
 }
 
 function say () {
