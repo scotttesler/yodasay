@@ -20,16 +20,19 @@ This project is a fork of https://github.com/piuccio/cowsay.
 The Yoda ASCII art was taken from [Christopher Johnson](http://www.chris.com/ascii/index.php?art=movies/star%20wars)'s website.
 
 ## Install
-
-    npm install -g yodasay
+```bash
+npm install -g yodasay
+```
 
 ## Usage
-
-    yodasay JavaScript FTW!
+```bash
+yodasay JavaScript FTW!
+```
 
 or
-
-    yodathink Node.js is cool
+```bash
+yodathink Node.js is cool
+```
 
 It acts in the same way as cowsay, so consult `yodasay(1)` or run `yodasay -h`
 
@@ -58,7 +61,7 @@ It acts in the same way as cowsay, so consult `yodasay(1)` or run `yodasay -h`
             /     |   |  :__/     :  \\
            |  |   |    \:   | \   |   ||
           /    \  : :  |:   /  |__|   /|
-      snd |     : : :_/_|  /'._\  '--|_\
+          |     : : :_/_|  /'._\  '--|_\
           /___.-/_|-'   \  \
                          '-'
 ```
@@ -78,8 +81,9 @@ console.log(yodasay.say({
 ```
 
 ## Pipe from standard input
-
-    echo please repeat | yodasay
+```bash
+echo please repeat | yodasay
+```
 
 ## Usage in the browser
 
