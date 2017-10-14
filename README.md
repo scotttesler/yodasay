@@ -14,10 +14,10 @@
           ----
 ```
 
-yodasay is a configurable talking yoda, originally written in Perl by [Tony Monroe](https://github.com/tnalpgge/rank-amateur-cowsay) and then re-written in Node.js by [Fabio Crisci](https://github.com/piuccio).
+yodasay is a talking yoda (and other Star Wars characters).
 
 This project is a fork of https://github.com/piuccio/cowsay.
-The Yoda ASCII art was taken from [Christopher Johnson](http://www.chris.com/ascii/index.php?art=movies/star%20wars)'s website.
+The ASCII art was taken from [Christopher Johnson](http://www.chris.com/ascii/index.php?art=movies/star%20wars)'s website.
 
 ## Install
 ```bash
