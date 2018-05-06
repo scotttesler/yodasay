@@ -28,13 +28,24 @@ var argv = require("optimist")
   }
 })
 .describe({
-  "h" : "Display this help message",
-  "n" : "If it is specified, the given message will not be word-wrapped.",
-  "W" : "Specifies roughly where the message should be wrapped. The default is equivalent to -W 40 i.e. wrap words at or before the 40th column.",
-  "f" : "Specifies a character picture file (''cowfile'') to use. It can be either a path to a character file or the name of one of characters included in the package.",
-  "l" : "List all cowfiles included in this package."
+	"b" : "Mode: Borg",
+	"d" : "Mode: Dead",
+	"g" : "Mode: Greedy",
+	"p" : "Mode: Paranoia",
+	"s" : "Mode: Stoned",
+	"t" : "Mode: Tired",
+	"w" : "Mode: Wired",
+	"y" : "Mode: Youthful",
+	"e" : "Select the appearance of the cow's eyes.",
+	"T" : "The tongue is configurable similarly to the eyes through -T and tongue_string.",
+	"h" : "Display this help message",
+	"n" : "If it is specified, the given message will not be word-wrapped.",
+	"W" : "Specifies roughly where the message should be wrapped. The default is equivalent to -W 40 i.e. wrap words at or before the 40th column.",
+	"f" : "Specifies a cow picture file (''cowfile'') to use. It can be either a path to a cow file or the name of one of cows included in the package.",
+	"r" : "Select a random cow",
+	"l" : "List all cowfiles included in this package."
 })
-.boolean(["b", "d", "g", "p", "s", "t", "w", "y", "n", "h", "l"])
+.boolean(["b", "d", "g", "p", "s", "t", "w", "y", "n", "h", "r", "l"])
 .argv;
 
 if (argv.l) {
@@ -46,7 +57,7 @@ if (argv.l) {
 } else {
   require("get-stdin")().then(function (data) {
     if (data) {
-      argv._ = [data];
+      argv._ = [require("strip-eof")(data)];
       say();
     } else {
       showHelp();
@@ -64,8 +75,8 @@ function say () {
 
 function listCows () {
   require("./index").list(function(err, list) {
-  if (err) throw new Error(err);
-  console.log(list.join("  "));
+    if (err) throw new Error(err);
+    console.log(list.join("  "));
   });
 }
 
