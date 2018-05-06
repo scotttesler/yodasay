@@ -4,8 +4,16 @@ import faces from "./lib/faces";
 
 import DEFAULT_COW from './cows/default.cow';
 
-export { default as R2D2 } from './cows/R2D2.cow';
+export { default as BOBA } from './cows/boba.cow';
+export { default as CHEWBACCA } from './cows/chewbacca.cow';
 export { default as DEFAULT } from './cows/default.cow';
+export { default as HAN } from './cows/han.cow';
+export { default as JOSHUABELL } from './cows/joshuabell.cow';
+export { default as LEIA } from './cows/leia.cow';
+export { default as LUKE } from './cows/luke.cow';
+export { default as R2D2 } from './cows/R2D2.cow';
+export { default as VADER } from './cows/vader.cow';
+export { default as VADER2 } from './cows/vader2.cow';
 
 function converToCliOptions(browserOptions) {
   const cliOptions = {

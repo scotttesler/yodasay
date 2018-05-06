@@ -7,16 +7,16 @@ export default {
   plugins: [
     nodeResolve({
       module: true,
-      jsnext: true,
+      jsnext: true
     }),
     commonjs(),
     string({
-      include: '**/*.cow',
-    }),
+      include: '**/*.cow'
+    })
   ],
   name: 'yodasay',
   output: [
     { file: 'build/yodasay.umd.js', format: 'umd' },
-    { file: 'build/yodasay.es.js', format: 'es' },
+    { file: 'build/yodasay.es.js', format: 'es' }
   ]
 }
