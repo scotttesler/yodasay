@@ -14,14 +14,14 @@
           ----
 ```
 
-yodasay is a talking yoda (and other Star Wars characters).
+yodasay is a talking yoda (plus other Star Wars characters)!
 
-This project is a fork of https://github.com/piuccio/cowsay.
+This project is a fork of [https://github.com/piuccio/cowsay](https://github.com/piuccio/cowsay).
 The ASCII art was taken from [Christopher Johnson](http://www.chris.com/ascii/index.php?art=movies/star%20wars)'s website.
 
 ## Install
 ```bash
-npm install -g yodasay
+npm i -g yodasay
 ```
 
 ## Usage
@@ -34,37 +34,15 @@ or
 yodathink Node.js is cool
 ```
 
-It acts in the same way as cowsay, so consult `yodasay(1)` or run `yodasay -h`
+It acts in the same way as cowsay, so consult `yodasay(1)` or run `yodasay -h`.
 
-```
- ________
-< indeed >
- --------
-       \
-        \
-                       .-.
-                      |_:_|
-                     /(_Y_)\
-                    ( \/M\/ )
- '.               _.'-/'-'\-'._
-   ':           _/.--'[[[[]'--.\_
-     ':        /_'  : |::"| :  '.\
-       ':     //   ./ |oUU| \.'  :\
-         ':  _:'..' \_|___|_/ :   :|
-           ':.  .'  |_[___]_|  :.':\
-            [::\ |  :  | |  :   ; : \
-             '-'   \/'.| |.' \  .;.' |
-             |\_    \  '-'   :       |
-             |  \    \ .:    :   |   |
-             |   \    | '.   :    \  |
-             /       \   :. .;       |
-            /     |   |  :__/     :  \\
-           |  |   |    \:   | \   |   ||
-          /    \  : :  |:   /  |__|   /|
-          |     : : :_/_|  /'._\  '--|_\
-          /___.-/_|-'   \  \
-                         '-'
-```
+TIP: Pipe the output through [lolcatjs](https://github.com/robertboloc/lolcatjs) for an awesome effect.
+
+<img alt="Multi-color Yoda 0" src="https://i.imgur.com/krE8t6n.png" width="190">
+
+<img alt="Multi-color Dark Vader 0" src="https://i.imgur.com/fA0KefY.png" width="320">
+
+<img alt="Multi-color Dark Vader 1" src="https://i.imgur.com/I3ZIt7k.png" width="260">
 
 ## Usage as a module
 
@@ -116,8 +94,6 @@ All characters are included in the bundle, but you can use rollup / webpack tree
 say({
   text: 'hello',
   cow: '', // Template for a character, get inspiration from `./cows`
-  eyes: 'oo', // Select the appearance of the character's eyes, equivalent to yodasay -e
-  tongue: 'L|', // The tongue is configurable similarly to the eyes through -T and tongue_string, equivalent to yodasay -T
   wrap: false, // If it is specified, the given message will not be word-wrapped. equivalent to yodasay -n
   wrapLength: 40, // Specifies roughly where the message should be wrapped. equivalent to yodasay -W
   mode: 'b', // One of 	"b", "d", "g", "p", "s", "t", "w", "y"
