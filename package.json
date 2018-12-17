@@ -3,14 +3,13 @@
   "version": "1.1.7",
   "description": "yodasay is a configurable talking Star Wars character",
   "keywords": [
-    "yoda",
-    "yodasay",
-    "yodathink",
     "cow",
     "cowsay",
     "cowthink",
-    "figlet",
     "talking",
+    "yoda",
+    "yodasay",
+    "yodathink",
     "ASCII"
   ],
   "homepage": "https://github.com/scotttesler/yodasay",
@@ -21,8 +20,6 @@
   },
   "license": "MIT",
   "main": "./index",
-  "module": "./build/cowsay.es.js",
-  "browser": "./build/cowsay.umd.js",
   "bin": {
     "yodasay": "./cli.js",
     "yodathink": "./cli.js"
@@ -30,7 +27,6 @@
   "files": [
     "index.js",
     "cli.js",
-    "build/",
     "cows/",
     "lib/"
   ],
@@ -39,7 +35,6 @@
     "url": "https://github.com/scotttesler/yodasay.git"
   },
   "scripts": {
-    "prepublish": "rollup -c",
     "test": "node test.js"
   },
   "dependencies": {
@@ -49,11 +44,7 @@
     "strip-final-newline": "^2.0.0"
   },
   "devDependencies": {
-    "nodeunit": "^0.11.3",
-    "rollup": "^0.68.0",
-    "rollup-plugin-commonjs": "^9.2.0",
-    "rollup-plugin-node-resolve": "^4.0.0",
-    "rollup-plugin-string": "^2.0.2"
+    "nodeunit": "^0.11.3"
   },
   "preferGlobal": true,
   "engines": {
