@@ -43,16 +43,16 @@
     "test": "node test.js"
   },
   "dependencies": {
-    "get-stdin": "^5.0.1",
+    "get-stdin": "^6.0.0",
     "optimist": "~0.6.1",
-    "string-width": "~2.1.1",
-    "strip-eof": "^1.0.0"
+    "string-width": "^3.0.0",
+    "strip-final-newline": "^2.0.0"
   },
   "devDependencies": {
-    "nodeunit": "~0.11.1",
-    "rollup": "^0.48.2",
-    "rollup-plugin-commonjs": "^8.2.0",
-    "rollup-plugin-node-resolve": "^3.0.0",
+    "nodeunit": "^0.11.3",
+    "rollup": "^0.68.0",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-string": "^2.0.2"
   },
   "preferGlobal": true,
